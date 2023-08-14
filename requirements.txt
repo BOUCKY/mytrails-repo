@@ -5,3 +5,5 @@ pipenv==2023.7.11
 platformdirs==3.5.1
 virtualenv==20.23.0
 virtualenv-clone==0.5.7
+gunicorn==21.2.0
+
