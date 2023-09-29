@@ -19,7 +19,7 @@ function HikePage({user}){
     }
 
     const handleFavorite = (hikeId,updatedVal) => {
-        fetch(`https://mytrails-backend.onrender.comhikes/${hikeId}`,{
+        fetch(`https://mytrails-backend.onrender.com/hikes/${hikeId}`,{
             method: "PATCH",
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({favorite: updatedVal})
