@@ -8,7 +8,7 @@ function HikeForm({ user, trail=null, addNewHike }){
     // const [ selectedTrail, setSelectedTrail ] = useState(null)
 
     useEffect(() => {
-        fetch('/trails')
+        fetch('https://mytrails-backend.onrender.com/trails')
             .then(r => r.json())
             .then(trails => setTrailNames(trails.map(trail => trail.name)))
     },[])
@@ -28,7 +28,7 @@ function HikeForm({ user, trail=null, addNewHike }){
     const handleSubmit = (e) => {
         e.preventDefault()
         //console.log(formData)
-        fetch('/hikes',{
+        fetch('https://mytrails-backend.onrender.com/hikes',{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({...formData, user_id: user.id,

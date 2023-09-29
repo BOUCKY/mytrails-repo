@@ -7,7 +7,7 @@ function Social({user}){
 const [users, setUsers] = useState([])
 
 useEffect(() => {
-    fetch('/users')
+    fetch('https://mytrails-backend.onrender.com/users')
     .then(r => r.json())
     .then(data => setUsers(data))
 }, [])

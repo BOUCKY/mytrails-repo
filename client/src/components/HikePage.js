@@ -8,7 +8,7 @@ function HikePage({user}){
     const [hikes, setHikes] = useState([])
 
     useEffect(() => {
-        fetch('/hikes')
+        fetch('https://mytrails-backend.onrender.com/hikes')
         .then(r => r.json())
         .then(data => 
             setHikes(data))
@@ -19,7 +19,7 @@ function HikePage({user}){
     }
 
     const handleFavorite = (hikeId,updatedVal) => {
-        fetch(`hikes/${hikeId}`,{
+        fetch(`https://mytrails-backend.onrender.comhikes/${hikeId}`,{
             method: "PATCH",
             headers: {"Content-Type" : "application/json"},
             body: JSON.stringify({favorite: updatedVal})

@@ -8,7 +8,7 @@ function Home(){
     const [search, setSearch] = useState(''); // State for search query
 
 useEffect(() => {
-    fetch('/trails')
+    fetch('https://mytrails-backend.onrender.com/trails')
     .then(r => r.json())
     .then(data => setTrails(data))
 },[])

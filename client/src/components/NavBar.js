@@ -5,7 +5,7 @@ import mytrails from '../myTrails.png'
 function NavBar( { user, setUser, navigate } ) {    
 
     const handleLogout = () => {
-    fetch("/logout",{
+    fetch("https://mytrails-backend.onrender.com/logout",{
       method: "DELETE"
     })
       .then( r => {

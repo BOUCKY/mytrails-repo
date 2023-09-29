@@ -3,7 +3,7 @@ import {Card} from "semantic-ui-react"
 function HikeCard({id, trailName, trailLocation, trailPark, trailImage, difficulty, rating, review, favorite, handleFavorite, removeHikeCard}){
 
     function handleDelete(){
-        fetch(`/hikes/${id}`,
+        fetch(`https://mytrails-backend.onrender.com/hikes/${id}`,
         {method: "DELETE",})
         .then(() => removeHikeCard(id))
         
